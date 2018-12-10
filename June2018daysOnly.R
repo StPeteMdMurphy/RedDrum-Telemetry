@@ -15,10 +15,10 @@
  location <- 'C:/Users/MD56M/Dropbox/rdmarfin12'
 
  # rd_dat <- read.sas7bdat(paste(location,'MARFIN12/May2016/fnldata_donly_update.sas7bdat',sep='/')) 
-  
+ dat_loc <- 'C:/Users/MD56M/Documents/GitHub/RedDrum-Telemetry/data'
   
  # library(RCurl)
-  rd_dat <- read.sas7bdat('https://github.com/StPeteMdMurphy/RedDrum-Telemetry/raw/master/fnldata_donly_update.sas7bdat')
+  rd_dat <- read.sas7bdat(paste(dat_loc,'fnldata_donly_update.sas7bdat',sep='/'))
 #  rd_dat <- read.sas7bdat(x) 
   
   
@@ -236,9 +236,9 @@
   
   #### multiple iterations of this fishes simulated track
       numsims <- 1
-     wbscale <- c(0.5)#,0.9,1.1,1.3) #1.0,2.0)       # weibel scalar
-     cmu <- c(0)#,pi/2,pi,3*pi/2)  # direction (mu, radians)-- 0=east,pi/2=south,pi=west,3/2pi=north
-     crho <- c(0.1)#,0.4,0.6)
+     wbscale <- c(0.6)#,0.9,1.1,1.3) #1.0,2.0)       # weibel scalar
+     cmu <- c(2.9*pi/2)#,pi/2,pi,3*pi/2)  # direction (mu, radians)-- 0=east,pi/2=south,pi=west,3/2pi=north
+     crho <- c(0.07)#,0.4,0.6)
      weib_shp <- c(2)
    
       # weib_shp <- c(3,2,1)  # gives skew probably 0.5 (high right skew) to 2 is best, at 5 slight left skew
